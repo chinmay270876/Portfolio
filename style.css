@@ -65,14 +65,18 @@ section {
 
 .navbar a:hover,
 .navbar a.active {
-    color: var(--text-color);
+    color: #c4b5ff;
 }
 
 
 #menu-icon {
     font-size: 3.6rem;
-    color: var(--text-colour);
+    color: var(--text-color);
     display: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    line-height: 1;
 }
 
 .home {
@@ -200,6 +204,7 @@ span {
 .skillitem {
     display: flex;
     align-items: center;
+    gap: 1rem;
     margin-top: 1rem;
 
 }
@@ -272,7 +277,7 @@ span {
 }
 
 .services-box p {
-    font-size: 2.6rem;
+    font-size: 1.6rem;
     margin: 1rem 0 3rem;
 }
 
@@ -308,10 +313,15 @@ span {
     text-align: center;
 }
 
-.portfolio-box img {
+.portfolio-box img,
+.portfolio-fallback {
     height: 40rem; 
     width: 100%;
     transition: .5s ease;
+}
+
+.portfolio-fallback {
+    background: #111111;
 }
 
 .portfolio-box:hover img {
@@ -344,7 +354,7 @@ span {
 .portfolio-layer a {
     display: flex;
     justify-content: center;
-    align-items: right;
+    align-items: center;
     width: 5rem;
     height: 5rem;
     background: var(--main-color);
@@ -483,10 +493,6 @@ span {
     .portfolio {
         padding-bottom: 7rem;
     }
-
-    .contact {
-        min-height: 2rem 3%;
-    }
 }
 
 @media (max-width: 768px) {
@@ -561,7 +567,7 @@ span {
     }
 }
 
-@media (max-width: 450) {
+@media (max-width: 450px) {
     html {
         font-size: 50%;
     }

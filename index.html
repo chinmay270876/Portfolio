@@ -18,11 +18,11 @@
 <body>
     <!--Header-->
     <header class="header">
-        <a href="#" class="logo">Portfolio</a>
+        <a href="#home" class="logo">Portfolio</a>
 
-        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <button type="button" class="fa-solid fa-bars" id="menu-icon" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation"></button>
 
-        <nav class="navbar">
+        <nav class="navbar" id="primary-navigation">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
@@ -42,17 +42,17 @@
                 love for creating beautiful, user-friendly interfaces,I strive to craft exceptional digital
                 experiences.I enjoy exploring, reading, and playing different sports.</p>
             <div class="social-media">
-                <a href="https://www.instagram.com/chinmaymathur07/" target="_blank"><i
+                <a href="https://www.instagram.com/chinmaymathur07/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
                         class="fa-brands fa-instagram"></i></a>
-                <a href="https://twitter.com/Chinmay07862672" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/chinmay-mathur-9bb2b2148/" target="_blank"><i
+                <a href="https://twitter.com/Chinmay07862672" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/chinmay-mathur-9bb2b2148/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
                         class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/chinmay270876" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/chinmay270876" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
             </div>
-            <a href="Resume 01-1.png" download="Resume" class="btn">Download CV</a>
+            <a href="app/src/assets/Images/resume.pdf" download="Chinmay-Mathur-Resume.pdf" class="btn">Download CV</a>
         </div>
         <div class="home-img">
-            <img src="./Photo.png">
+            <img src="app/src/assets/Images/Profile%201.png" alt="Portrait of Chinmay Mathur">
         </div>
     </section>
 
@@ -62,7 +62,7 @@
 
     <section class="about" id="about">
         <div class="about-img">
-            <img src="./Photo 2.png">
+            <img src="app/src/assets/Images/Profile%202.png" alt="Portrait of Chinmay Mathur">
         </div>
 
         <div class="about-content">
@@ -74,14 +74,13 @@
 
             <h3>My Skills</h3>
             <div class="skillcontainer">
-                <div class="skillitem"></div>HTML: <div class="skill t6"></div>
-                <div class="skillitem"></div>CSS: <div class="skill t6"></div>
-                <div class="skillitem"></div>JS: <div class="skill t5"></div>
-                <div class="skillitem"></div>Phython: <div class="skill hundred"></div>
-                <div class="skillitem"></div>Java: <div class="skill t5"></div>
-                <div class="skillitem"></div>C: <div class="skill fifty"></div>
+                <div class="skillitem"><span>HTML</span><div class="skill t6"></div></div>
+                <div class="skillitem"><span>CSS</span><div class="skill t6"></div></div>
+                <div class="skillitem"><span>JS</span><div class="skill t5"></div></div>
+                <div class="skillitem"><span>Python</span><div class="skill hundred"></div></div>
+                <div class="skillitem"><span>Java</span><div class="skill t5"></div></div>
+                <div class="skillitem"><span>C</span><div class="skill fifty"></div></div>
             </div>
-        </div>
         </div>
     </section>
 
@@ -101,7 +100,6 @@
                     transformative potential across
                     various industries.</p>
 
-                <a href="#" class="btn">Read More</a>
             </div>
 
             <div class="services-box">
@@ -110,23 +108,19 @@
                 <p>Machine Learning is a branch of artificial intelligence focused on the development of algorithms that
                     enable computers to learn and make decisions based on data. It involves the creation
                     of models that learn and improve their performance over time.</p>
-
-                <a href="#" class="btn">Read More</a>
             </div>
 
             <div class="services-box">
                 <i class="fa-brands fa-android"></i>
                 <h3>Web Development</h3>
                 <p>From designing interactive user interfaces to building backend systems, we offer comprehensive solutions to bring your online presence to life. Let's turn your vision into reality and create a standout website that represents your brand effectively.</p>
-
-                <a href="#" class="btn">Read More</a>
             </div>
 
         </div>
     </section>
 
 
-    <!--Service-->>
+    <!--Service-->
 
 
     <!--Portfolio-->
@@ -135,20 +129,17 @@
 
         <div class="portfolio-container">
             <div class="portfolio-box">
-                <img src="./Photo 7.jpg">
-                <div class="portfolio-layer"></div>
+                <div class="portfolio-fallback" role="img" aria-label="Art Auction System, image not available"></div>
                 <h4>Art Auction System</h4>
             </div>
 
             <div class="portfolio-box">
-                <img src="./Photo 3.png">
-                <div class="portfolio-layer"></div>
+                <div class="portfolio-fallback" role="img" aria-label="Virtual Drawing system, image not available"></div>
                 <h4>Virtual Drawing system</h4>
             </div>
 
             <div class="portfolio-box">
-                <img src="./photo 5.jpg">
-                <div class="portfolio-layer"></div>
+                <div class="portfolio-fallback" role="img" aria-label="Bird Detection System, image not available"></div>
                 <h4>Bird Detection System</h4>
             </div>
         </div>
@@ -161,9 +152,7 @@
     <section class="CV" id="CV">
         <h2 class="heading">My <span>Resume</span></h2>
 
-        <div class="CV-img">
-            <img src="./Resume 01-1.png">
-        </div>
+        <a href="app/src/assets/Images/resume.pdf" download="Chinmay-Mathur-Resume.pdf" class="btn">Download Resume (PDF)</a>
     </section>
 
     <!--CV-->
@@ -174,17 +163,17 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form action="send_email.php" method="post">
+        <form action="index.php" method="post">
             <div class="input-box">
-                <input type="text" name="fullname" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="fullname" placeholder="Full Name" aria-label="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" aria-label="Email Address" required>
             </div>
 
             <div class="input-box">
-                <input type="tel" name="phone" placeholder="Mobile Number">
-                <input type="text" name="subject" placeholder="Email Subject" required>
+                <input type="tel" name="phone" placeholder="Mobile Number" aria-label="Mobile Number">
+                <input type="text" name="subject" placeholder="Email Subject" aria-label="Email Subject" required>
             </div>
-            <textarea name="message" cols="30" rows="6" placeholder="Your Message" required></textarea>
+            <textarea name="message" cols="30" rows="6" placeholder="Your Message" aria-label="Your Message" required></textarea>
             <input type="submit" value="Send Message" class="btn">
         </form>
     </section>
@@ -198,7 +187,7 @@
         </div>
 
         <div class="footer-iconTop">
-            <a href="#home"> <i class="fa-solid fa-angle-up"></i></a>
+            <a href="#home" aria-label="Back to top"> <i class="fa-solid fa-angle-up"></i></a>
         </div>
     </footer>
     <!--Footer-->
