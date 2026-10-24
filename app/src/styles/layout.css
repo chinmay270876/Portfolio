@@ -295,7 +295,8 @@ section {
 .hero-btn,
 .btn,
 .project-link,
-.project-toggle {
+.project-toggle,
+.cert-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -345,20 +346,23 @@ section {
 }
 
 .hero-btn-secondary,
-.project-toggle {
+.project-toggle,
+.cert-toggle {
   background: transparent;
   border-color: var(--color-border);
   color: var(--color-text);
 }
 
 .hero-btn-secondary:hover,
-.project-toggle:hover {
+.project-toggle:hover,
+.cert-toggle:hover {
   border-color: var(--color-accent);
   color: var(--color-text);
   transform: translateY(-0.2rem);
 }
 
-.project-toggle[aria-expanded='true'] {
+.project-toggle[aria-expanded='true'],
+.cert-toggle[aria-expanded='true'] {
   border-color: var(--color-accent);
   background: rgba(255, 16, 24, 0.1);
   box-shadow: inset 3px 0 0 var(--color-accent);
@@ -1008,11 +1012,71 @@ section {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.cert-grid {
+  align-items: start;
+}
+
 .approach-card,
 .cert-card,
 .activity-card {
   padding: 2.4rem;
   transition: border-color var(--duration-fast) var(--ease-out);
+}
+
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cert-date,
+.cert-card h3,
+.cert-panel {
+  align-self: stretch;
+}
+
+.cert-toggle {
+  margin-top: 2rem;
+}
+
+.cert-card.is-open {
+  border-color: var(--color-accent);
+}
+
+.cert-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  width: 100%;
+  transition: grid-template-rows 0.45s var(--ease-out);
+}
+
+.cert-panel.is-open {
+  grid-template-rows: 1fr;
+}
+
+.cert-panel-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.cert-panel.is-open .cert-panel-inner {
+  padding-top: 2rem;
+}
+
+.cert-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+  background: #f5f5f5;
+}
+
+.cert-unavailable {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
 
 .approach-card:hover,
@@ -1392,7 +1456,8 @@ section {
   .hero-btn,
   .project-card-actions,
   .project-link,
-  .project-toggle {
+  .project-toggle,
+  .cert-toggle {
     width: 100%;
   }
 
@@ -1431,11 +1496,13 @@ section {
   .btn:hover,
   .project-link:hover,
   .project-toggle:hover,
+  .cert-toggle:hover,
   .project-card:hover .project-media img {
     transform: none;
   }
 
   .project-details,
+  .cert-panel,
   [data-reveal] {
     transition: none;
     opacity: 1;
